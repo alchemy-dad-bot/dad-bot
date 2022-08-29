@@ -1,6 +1,9 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const { init } = require('./commands');
 const dotenv = require('dotenv');
+const fetch = require('cross-fetch');
+const { getDadJokes } = require('./data/dad-jokes-data');
+
 dotenv.config();
 
 const client = new Client({ 
@@ -12,6 +15,16 @@ client.once('ready', () => {
   console.log('Ready from index.js');
 });
 
+// async function getJSONresponse(body) {
+//   let fullBody = '';
+
+//   for await (const data of body) {
+//     fullBody += data.toString();
+//   }
+//   const dad = await getDadJokes();
+//   console.log(dad);
+//   return JSON.parse(fullBody);
+// }
 
 client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return ;
@@ -24,8 +37,13 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply(`Server name: ${interaction.guild.name}\nTotal members: ${interaction.guild.memberCount}`);
   } else if (commandName === 'user') {
     await interaction.reply('User info.');
+  // Start custom dad commands
+  } else if (commandName === 'dad-joke') {
+    const jokeResult = await getDadJokes();
+    interaction.reply(jokeResult.joke);
   }
 });
 // console.log('client', client);
+
 
 client.login(process.env.DISCORD_TOKEN);
