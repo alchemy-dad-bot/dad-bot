@@ -15,6 +15,7 @@ async function getDadJokes() {
     }
     return dadJoke;
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.error(err);
   }
 }
