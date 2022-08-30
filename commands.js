@@ -14,6 +14,7 @@ const commands = [
       option.setName('input')
         .setDescription('Give it a shot!')
         .setRequired(true)),
+  new SlashCommandBuilder().setName('my-jokes').setDescription('A list of your jokes'),    
 ]
   .map(command => command.toJSON());
 
