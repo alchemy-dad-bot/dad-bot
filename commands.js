@@ -8,7 +8,12 @@ const commands = [
   new SlashCommandBuilder().setName('server').setDescription('Replies with server info!'),
   new SlashCommandBuilder().setName('user').setDescription('Replies with user info!'),
   new SlashCommandBuilder().setName('dad-joke').setDescription('Replies with a random joke'),
-  new SlashCommandBuilder().setName('dad-favorite').setDescription('Saves last dad joke to favorites')
+  new SlashCommandBuilder().setName('add-joke')
+    .setDescription('Add your own dad joke')
+    .addStringOption(option => 
+      option.setName('input')
+        .setDescription('Give it a shot!')
+        .setRequired(true)),
 ]
   .map(command => command.toJSON());
 

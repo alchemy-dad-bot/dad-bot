@@ -40,10 +40,12 @@ client.on('interactionCreate', async interaction => {
   // Start custom dad commands
   } else if (commandName === 'dad-joke') {
     const jokeResult = await getDadJokes();
-    interaction.reply(jokeResult.joke, jokeResult.id);
-    console.log(interaction.reply(jokeResult.joke, jokeResult.id));
+    interaction.reply(jokeResult.joke);
+
+  // add dad joke  
   } else if (commandName === 'add-joke') {
-    const joke = await User.insert(interaction.user.id); //finds user message// //do not miss this brian//
+    await User.insert({ user_id: interaction.user.id, content: interaction.options._hoistedOptions[0].value });
+    await interaction.reply({ content: 'Good one Kiddo!', ephemeral: true });
   }
 });
 // console.log('client', client);
