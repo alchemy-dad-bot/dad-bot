@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const { SlashCommandBuilder, Routes } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const dotenv = require('dotenv');
@@ -15,6 +16,7 @@ const commands = [
         .setDescription('Give it a shot!')
         .setRequired(true)),
   new SlashCommandBuilder().setName('my-jokes').setDescription('A list of your jokes'),    
+  new SlashCommandBuilder().setName('get-dads').setDescription('A list of dads'),
 ]
   .map(command => command.toJSON());
 
