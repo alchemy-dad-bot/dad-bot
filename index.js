@@ -53,6 +53,7 @@ client.on('interactionCreate', async (interaction) => {
     await interaction.reply({ content: 'Good one Kiddo!', ephemeral: true });
   } else if (commandName === 'my-jokes') {
     const joke = await User.getRandomJoke({ user_id: interaction.user.id });
+    console.log(interaction.user.id);
     interaction.reply(joke.content);
     console.log(interaction.reply);
   }
