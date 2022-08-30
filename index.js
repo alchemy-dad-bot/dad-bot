@@ -1,9 +1,9 @@
-const { Client, GatewayIntentBits } = require('discord.js');
+const { Client, GatewayIntentBits, userMention } = require('discord.js');
 const { init } = require('./commands');
 const dotenv = require('dotenv');
 const fetch = require('cross-fetch');
 const { getDadJokes } = require('./data/dad-jokes-data');
-
+const User = require('./lib/models/User');
 dotenv.config();
 
 const client = new Client({ 
@@ -40,7 +40,10 @@ client.on('interactionCreate', async interaction => {
   // Start custom dad commands
   } else if (commandName === 'dad-joke') {
     const jokeResult = await getDadJokes();
-    interaction.reply(jokeResult.joke);
+    interaction.reply(jokeResult.joke, jokeResult.id);
+    console.log(interaction.reply(jokeResult.joke, jokeResult.id));
+  } else if (commandName === 'add-joke') {
+    const joke = await User.insert(interaction.user.id); //finds user message// //do not miss this brian//
   }
 });
 // console.log('client', client);
