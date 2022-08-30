@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
 const { Client, GatewayIntentBits } = require('discord.js');
 const { init } = require('./commands');
-const dotenv = require('dotenv');
 // const fetch = require('cross-fetch');
 const { getDadJokes } = require('./data/dad-jokes-data');
 const User = require('./lib/models/User');
 const Creator = require('./lib/models/Creator');
+const dotenv = require('dotenv');
 dotenv.config();
-
+ 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
 });
