@@ -6,7 +6,6 @@ const { getDadJokes, searchDadJokes } = require('./data/dad-jokes-data');
 const User = require('./lib/models/User');
 const Creator = require('./lib/models/Creator');
 const dotenv = require('dotenv');
-const Favorite = require('./lib/models/Favorite');
 dotenv.config();
  
 const client = new Client({
