@@ -1,13 +1,14 @@
 /* eslint-disable no-console */
 const { Client, GatewayIntentBits } = require('discord.js');
 const { init } = require('./commands');
-const dotenv = require('dotenv');
 // const fetch = require('cross-fetch');
-const { getDadJokes } = require('./data/dad-jokes-data');
+const { getDadJokes, searchDadJokes } = require('./data/dad-jokes-data');
 const User = require('./lib/models/User');
 const Creator = require('./lib/models/Creator');
+const dotenv = require('dotenv');
+const Favorite = require('./lib/models/Favorite');
 dotenv.config();
-
+ 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
 });
@@ -16,17 +17,6 @@ client.once('ready', () => {
   init();
   console.log('Ready from index.js');
 });
-
-// async function getJSONresponse(body) {
-//   let fullBody = '';
-
-//   for await (const data of body) {
-//     fullBody += data.toString();
-//   }
-//   const dad = await getDadJokes();
-//   console.log(dad);
-//   return JSON.parse(fullBody);
-// }
 
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
@@ -47,6 +37,10 @@ client.on('interactionCreate', async (interaction) => {
     interaction.reply(jokeResult.joke);
 
     // add dad joke
+  } else if(commandName === 'search-joke') { 
+    const jokes = await searchDadJokes(interaction.options._hoistedOptions[0].value);
+    console.log('jokes', jokes);
+    await interaction.reply(jokes.results[Math.floor(Math.random() * jokes.results.length)].joke);
   } else if (commandName === 'add-joke') {
     await User.insert({
       user_id: interaction.user.id,
@@ -56,7 +50,6 @@ client.on('interactionCreate', async (interaction) => {
   } else if (commandName === 'my-jokes') {
     const joke = await User.getRandomJoke({ user_id: interaction.user.id });
     interaction.reply(joke.content);
-    console.log(interaction.reply);
   } else if (commandName === 'get-dads') {
     const dad = await Creator.getCreators();
     interaction.reply({ 
@@ -68,9 +61,14 @@ client.on('interactionCreate', async (interaction) => {
       ${ dad[3].name }, ${ dad[3].linkedin}, ${dad[3].github}
       `
     });
+  } else if (commandName === 'add-favorite') {
+    await Favorite.addFavorite({ 
+      user_id: interaction.user.id,
+      content: interaction.options._hoistedOptions[0].value });
+    await interaction.reply({ content: 'You got it sport!', ephemeral: true });
   }
 });
 
-// console.log('client', client);
+
 
 client.login(process.env.DISCORD_TOKEN);

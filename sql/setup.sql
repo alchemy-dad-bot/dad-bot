@@ -2,6 +2,7 @@
 -- The SQL in this file will be executed when you run `npm run setup-db`
 DROP TABLE IF EXISTS users_dadbot CASCADE;
 DROP TABLE IF EXISTS creators CASCADE;
+DROP TABLE IF EXISTS dadbot_favorites;
 
 CREATE TABLE users_dadbot (
 id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -16,6 +17,12 @@ CREATE TABLE creators (
     github TEXT NOT NULL
 );
 
+
+CREATE TABLE dadbot_favorites (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    user_id TEXT NOT NULL,
+    content TEXT NOT NULL
+);
 
 
 INSERT INTO creators (name, linkedin, github) VALUES
