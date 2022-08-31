@@ -56,6 +56,7 @@ client.on('interactionCreate', async (interaction) => {
   } else if (commandName === 'my-jokes') {
     const joke = await User.getRandomJoke({ user_id: interaction.user.id });
     interaction.reply(joke.content);
+    console.log('random user created joke', joke);
     console.log(interaction.reply);
   } else if (commandName === 'get-dads') {
     const dad = await Creator.getCreators();
@@ -68,6 +69,12 @@ client.on('interactionCreate', async (interaction) => {
       ${ dad[3].name }, ${ dad[3].linkedin}, ${dad[3].github}
       `
     });
+  }
+  else if (commandName === 'delete-joke') {
+    const deleteJoke = await User.deleteUserJoke({ 
+      id: interaction.id });
+    console.log('line 75', deleteJoke);
+    interaction.reply(deleteJoke);
   }
 });
 
