@@ -17,11 +17,13 @@ CREATE TABLE creators (
     github TEXT NOT NULL
 );
 
+
 CREATE TABLE dadbot_favorites (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_id TEXT NOT NULL,
     content TEXT NOT NULL
 );
+
 
 INSERT INTO creators (name, linkedin, github) VALUES
 ('Alejandra El-Dasouki', 'https://www.linkedin.com/in/alejandrael-dasouki', 'https://github.com/Alejae1998'),
