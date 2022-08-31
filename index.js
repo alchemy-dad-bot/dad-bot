@@ -63,16 +63,27 @@ client.on('interactionCreate', async (interaction) => {
     interaction.reply({ 
       content: 
       `
-      ${ dad[0].name }, ${ dad[0].linkedin}, ${dad[0].github},
-      ${ dad[1].name }, ${ dad[1].linkedin}, ${dad[1].github},
-      ${ dad[2].name }, ${ dad[2].linkedin}, ${dad[2].github},
-      ${ dad[3].name }, ${ dad[3].linkedin}, ${dad[3].github}
-      `
+      ${ dad[0].name }, ${dad[0].github},
+      `, 'embeds': [
+        {
+          title: 'Alejandra',
+          image: {
+            url: `${dad[0].image_id}`
+          },
+          url: `${dad[0].linkedin}`,
+
+          description: '[My Github](https://github.com/Alejae1998)',
+        }
+
+      ]
     });
   }
+  // ${ dad[1].name }, ${ dad[1].linkedin}, ${dad[1].github}, ${dad[1].image_id},
+  // ${ dad[2].name }, ${ dad[2].linkedin}, ${dad[2].github}, ${dad[2].image_id},
+  // ${ dad[3].name }, ${ dad[3].linkedin}, ${dad[3].github} ${dad[3].image_id}
   else if (commandName === 'delete-joke') {
     const deleteJoke = await User.deleteUserJoke({ 
-      id: interaction.id });
+      id: interaction.id }); // need to look at data body to know what to refer to
     console.log('line 75', deleteJoke);
     interaction.reply(deleteJoke);
   }
