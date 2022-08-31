@@ -23,9 +23,7 @@ const commands = [
         .setRequired(true)),
   new SlashCommandBuilder().setName('my-jokes').setDescription('A list of your jokes'),    
   new SlashCommandBuilder().setName('get-dads').setDescription('A list of dads'),
-
-  new SlashCommandBuilder().setName('add-favorite').setDescription('Save that knee=slapper of a joke!')
-
+  new SlashCommandBuilder().setName('delete-joke').setDescription('Deletes a user joke') // Currently Working on
 ]
   .map(command => command.toJSON());
 
