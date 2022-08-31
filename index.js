@@ -63,7 +63,7 @@ client.on('interactionCreate', async (interaction) => {
     interaction.reply({ 
       content: 
       `
-      ${ dad[0].name }, ${dad[0].github},
+      
       `, 'embeds': [
         {
           title: 'Alejandra',
@@ -71,10 +71,32 @@ client.on('interactionCreate', async (interaction) => {
             url: `${dad[0].image_id}`
           },
           url: `${dad[0].linkedin}`,
-
           description: '[My Github](https://github.com/Alejae1998)',
+        },
+        {
+          title: 'Austin',
+          image: {
+            url: `${dad[1].image_id}`
+          },
+          url: `${dad[1].linkedin}`,
+          description: '[My Github](https://github.com/austinbhan)',
+        }, 
+        {
+          title: 'Olivia',
+          image: {
+            url: `${dad[2].image_id}`
+          },
+          url: `${dad[2].linkedin}`,
+          description: '[My Github](https://github.com/Olivia-Pasion)',
+        },
+        {
+          title: 'Brien',
+          image: {
+            url: `${dad[3].image_id}`
+          },
+          url: `${dad[3].linkedin}`,
+          description: '[My Github](https://github.com/briensthomas)',
         }
-
       ]
     });
   }
