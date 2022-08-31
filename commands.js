@@ -17,6 +17,7 @@ const commands = [
         .setRequired(true)),
   new SlashCommandBuilder().setName('my-jokes').setDescription('A list of your jokes'),    
   new SlashCommandBuilder().setName('get-dads').setDescription('A list of dads'),
+  
 ]
   .map(command => command.toJSON());
 

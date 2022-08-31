@@ -16,6 +16,8 @@ CREATE TABLE creators (
     github TEXT NOT NULL
 );
 
+
+
 INSERT INTO creators (name, linkedin, github) VALUES
 ('Alejandra El-Dasouki', 'https://www.linkedin.com/in/alejandrael-dasouki', 'https://github.com/Alejae1998'),
 ('Austin Han', 'https://www.linkedin.com/in/austin-han-740a69157', 'https://github.com/austinbhan'),
