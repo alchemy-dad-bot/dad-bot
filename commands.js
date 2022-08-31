@@ -9,6 +9,12 @@ const commands = [
   new SlashCommandBuilder().setName('server').setDescription('Replies with server info!'),
   new SlashCommandBuilder().setName('user').setDescription('Replies with user info!'),
   new SlashCommandBuilder().setName('dad-joke').setDescription('Replies with a random joke'),
+  new SlashCommandBuilder().setName('search-joke')
+    .setDescription('Search for a joke with a specific term')
+    .addStringOption(option => 
+      option.setName('term')
+        .setDescription('Gimme a topic, bud!')
+        .setRequired(true)),
   new SlashCommandBuilder().setName('add-joke')
     .setDescription('Add your own dad joke')
     .addStringOption(option => 
@@ -17,6 +23,7 @@ const commands = [
         .setRequired(true)),
   new SlashCommandBuilder().setName('my-jokes').setDescription('A list of your jokes'),    
   new SlashCommandBuilder().setName('get-dads').setDescription('A list of dads'),
+  new SlashCommandBuilder().setName('add-favorite').setDescription('Save that knee=slapper of a joke!')
 ]
   .map(command => command.toJSON());
 
