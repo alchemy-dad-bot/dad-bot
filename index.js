@@ -18,17 +18,6 @@ client.once('ready', () => {
   console.log('Ready from index.js');
 });
 
-// async function getJSONresponse(body) {
-//   let fullBody = '';
-
-//   for await (const data of body) {
-//     fullBody += data.toString();
-//   }
-//   const dad = await getDadJokes();
-//   console.log(dad);
-//   return JSON.parse(fullBody);
-// }
-
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
@@ -60,9 +49,7 @@ client.on('interactionCreate', async (interaction) => {
     await interaction.reply({ content: 'Good one Kiddo!', ephemeral: true });
   } else if (commandName === 'my-jokes') {
     const joke = await User.getRandomJoke({ user_id: interaction.user.id });
-    console.log(interaction.user.id);
     interaction.reply(joke.content);
-    console.log(interaction.reply);
   } else if (commandName === 'get-dads') {
     const dad = await Creator.getCreators();
     interaction.reply({ 
@@ -83,6 +70,5 @@ client.on('interactionCreate', async (interaction) => {
 });
 
 
-// console.log('client', client);
 
 client.login(process.env.DISCORD_TOKEN);
