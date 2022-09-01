@@ -15,6 +15,7 @@ const client = new Client({
 client.once('ready', () => {
   init();
   console.log('Ready from index.js');
+  client.channels.cache.get(process.env.CHANNEL_ID).send('I am online!');
 });
 
 client.on('interactionCreate', async (interaction) => {
