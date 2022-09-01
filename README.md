@@ -2,7 +2,7 @@
 ![DadBoTIcon](./public/DAD-BOT-LOGO.jpg)
 
 # What Is DadBot?
-**If you were never exposed to the embarrassment of a father figure during your formative years, look no further! With DadBot, you can groan at the corniest dad-jokes known to man.**
+**DadBot is a Discord Bot created using discord.js, as well as APIs from icanhazdadjoke, Giphy, and YouTube combined to create the ultimate user experience, guaranteed to make anybody groan in embarassment.**
 
 # Invite Link <br>
 <a href="https://discord.com/api/oauth2/authorize?client_id=1012796022885453844&permissions=2147486720&scope=applications.commands%20bot"><img src="./public/invite.png" width="25"/></a>
