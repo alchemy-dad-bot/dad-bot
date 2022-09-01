@@ -24,6 +24,7 @@ const commands = [
   new SlashCommandBuilder().setName('my-jokes-random').setDescription('Get a random joke you made'),
   new SlashCommandBuilder().setName('my-jokes').setDescription('A list of jokes you made'), 
   new SlashCommandBuilder().setName('get-dads').setDescription('A list of dads'),
+  new SlashCommandBuilder().setName('dad-gif').setDescription('Gets a random dad gif'),
   new SlashCommandBuilder().setName('delete-joke').setDescription('Deletes a user joke') // Currently Working on
 ]
   .map(command => command.toJSON());

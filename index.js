@@ -5,6 +5,7 @@ const { init } = require('./commands');
 const { getDadJokes, searchDadJokes } = require('./data/dad-jokes-data');
 const User = require('./lib/models/User');
 const Creator = require('./lib/models/Creator');
+const { getGifs } = require('./data/giphy-API');
 const dotenv = require('dotenv');
 dotenv.config();
  
@@ -46,7 +47,12 @@ client.on('interactionCreate', async (interaction) => {
       content: interaction.options._hoistedOptions[0].value,
     });
     await interaction.reply({ content: 'Good one Kiddo!', ephemeral: true });
-  } else if (commandName === 'my-jokes') {
+  }  else if (commandName === 'dad-gif') {
+    const gifResult = await getGifs();
+    await interaction.reply(gifResult.data.url);
+  }
+  
+  else if (commandName === 'my-jokes') {
     const jokeList = await User.getAllUserJokes({ user_id: interaction.user.id });
     let i = 0;
     //const jokes = jokeList[0];
