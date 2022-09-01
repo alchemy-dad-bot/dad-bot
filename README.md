@@ -33,11 +33,12 @@ Alejandra El-Dasouki: <br>
 Austin Han: <br>
 <a href="https://github.com/austinbhan"><img src="./public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/austin-han-740a69157/"><img src="./public/LI-Logo.png" width="65" height="17"/></a>
 
+Olivia Pasion: <br>
+<a href="https://github.com/Olivia-Pasion"><img src="./public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/olivia-pasion/"><img src="./public/LI-Logo.png" width="65" height="17"/></a>
+
 Brien Thomas: <br> 
 <a href="https://github.com/briensthomas"><img src="./public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/brien-thomas/"><img src="./public/LI-Logo.png" width="65" height="17"/></a>
 
-Olivia Passion: <br>
-<a href="https://github.com/Olivia-Pasion"><img src="./public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/olivia-pasion/"><img src="./public/LI-Logo.png" width="65" height="17"/></a>
 
 # Our Plan
 <a href="https://miro.com/app/board/uXjVPcbFIzY=/"><img src="./public/miro-logo.svg" width="85" height="70"/></a>
