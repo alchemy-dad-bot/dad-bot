@@ -1,58 +1,47 @@
-# Template for Backend Express
+# DadBot
+![DadBoTIcon](./public/DAD-BOT-LOGO.jpg)
 
-The Golden Rule:
-🦸 🦸‍♂️ Stop starting and start finishing. 🏁
+# What Is DadBot?
+**If you were never exposed to the embarrassment of a father figure during your formative years, look no further! With DadBot, you can groan at the corniest dad-jokes known to man.**
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+# Invite Link <br>
+<a href="https://discord.com/api/oauth2/authorize?client_id=1012796022885453844&permissions=2147486720&scope=applications.commands%20bot"><img src="./public/invite.png" width="25"/></a>
 
-## Scripts
+# Built with 
 
-| command                | description                                                                         |
-| ---------------------- | ----------------------------------------------------------------------------------- |
-| `npm start`            | starts the app - should only be used in production as changes will not get reloaded |
-| `npm run start:watch`  | runs the app using `nodemon` which watches for changes and reloads the app          |
-| `npm test`             | runs the tests once                                                                 |
-| `npm run test:watch`   | continually watches and runs the tests when files are updated                       |
-| `npm run setup-db`     | sets up the database locally                                                        |
-| `npm run setup-heroku` | sets up the database on heroku                                                      |
+<p align="left"> <a href="https://heroku.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" alt="heroku" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://jestjs.io" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg" alt="jest" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> </p>
 
+# Commands
 
-# DadBot:
-(Discord use only)
-
-## What is DadBot? 
-BLANK DESCRIPTION HERE
-
-
-## DEV Team:
-* Alejandra El-Dasouki-- [GitHub](https://github.com/Alejae1998) | [LinkedIn](https://www.linkedin.com/in/alejandrael-dasouki/)
-* Austin Han-- [GitHub](https://github.com/austinbhan) | [LinkedIn](https://www.linkedin.com/in/austin-han-740a69157/)
-* Olivia Pasion-- [GitHub](https://github.com/Olivia-Pasion) | [LinkedIn](https://www.linkedin.com/in/olivia-pasion/)
-* Brien Thomas-- [GitHub](https://github.com/briensthomas) | [LinkedIn](https://www.linkedin.com/in/brien-thomas/)
-
-
-# Commands:
-Command|Description
+Command|Description 
 --- | ---
-/dad-joke|Returns a random dad joke. //Example only
+/dad-joke|Returns a random Dad joke.
+/search-joke|Returns a joke about the topic you enter. 
+/add-joke|Allows user to add a joke.
+/my-jokes|Returns a list your submitted jokes.
+/my-jokes-random|Returns a random joke from your submissions.
+/dad-gif|Returns a random dad joke gif.
+/get-dads|Returns the devs information.
+!dad-help|Returns a Youtube video.
 
 
+# Dads Team 
 
-# Add DadBot to your Discord channel: <br> 
-<a href="#">Discord Icon Here?</a>
 
-## Our Plan:
+Alejandra El-Dasouki: <br>
+<a href="https://github.com/Alejae1998"><img src="./public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/alejandrael-dasouki/"><img src="./public/LI-Logo.png" width="65" height="17"/></a>
 
-[Check out our Miro Board here.](https://miro.com/app/board/uXjVPcbFIzY=/?share_link_id=691875534494)
+Austin Han: <br>
+<a href="https://github.com/austinbhan"><img src="./public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/austin-han-740a69157/"><img src="./public/LI-Logo.png" width="65" height="17"/></a>
 
-## Technologies:
+Olivia Pasion: <br>
+<a href="https://github.com/Olivia-Pasion"><img src="./public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/olivia-pasion/"><img src="./public/LI-Logo.png" width="65" height="17"/></a>
 
-| Frontend Tech   | Backend Tech    | Libraries           | Testing              |
-|-----------------|-----------------|---------------------|----------------------|
-|                 | Node.js         |                     | Jest                 |
-|                 | Express         |                     |                      |
-|                 | jsonwebtoken    |                     |                      |
-|                 |                 |                     |                      |
+Brien Thomas: <br> 
+<a href="https://github.com/briensthomas"><img src="./public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/brien-thomas/"><img src="./public/LI-Logo.png" width="65" height="17"/></a>
 
-# Second Technologies Options:
-<p align="left"> <a href="https://heroku.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" alt="heroku" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://jestjs.io" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg" alt="jest" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> </p>
+
+# Our Plan
+<a href="https://miro.com/app/board/uXjVPcbFIzY=/"><img src="./public/miro-logo.svg" width="85" height="70"/></a>
+
+

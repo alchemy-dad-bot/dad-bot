@@ -15,6 +15,7 @@ const client = new Client({
 client.once('ready', () => {
   init();
   console.log('Ready from index.js');
+  client.channels.cache.get(process.env.CHANNEL_ID).send('I am online!');
 });
 
 client.on('interactionCreate', async (interaction) => {
@@ -46,7 +47,19 @@ client.on('interactionCreate', async (interaction) => {
       content: interaction.options._hoistedOptions[0].value,
     });
     await interaction.reply({ content: 'Good one Kiddo!', ephemeral: true });
-  } else if (commandName === 'my-joke-random') {
+  } else if (commandName === 'my-jokes') {
+    const jokeList = await User.getAllUserJokes({ user_id: interaction.user.id });
+    let i = 0;
+    //const jokes = jokeList[0];
+    const jokeMap = jokeList.map((joke) => {
+      i++;
+      return i + ') ' + joke.content;
+    });
+    console.log('command console', jokeList, jokeMap);
+    const jokes = jokeMap.join('\n');
+    interaction.reply(jokes);
+    
+  } else if (commandName === 'my-jokes-random') {
     const joke = await User.getRandomJoke({ user_id: interaction.user.id });
     interaction.reply(joke.content);
     console.log('random user created joke', joke);
@@ -92,15 +105,6 @@ client.on('interactionCreate', async (interaction) => {
         }
       ]
     });
-  }
-  // ${ dad[1].name }, ${ dad[1].linkedin}, ${dad[1].github}, ${dad[1].image_id},
-  // ${ dad[2].name }, ${ dad[2].linkedin}, ${dad[2].github}, ${dad[2].image_id},
-  // ${ dad[3].name }, ${ dad[3].linkedin}, ${dad[3].github} ${dad[3].image_id}
-  else if (commandName === 'delete-joke') {
-    const deleteJoke = await User.deleteUserJoke({ 
-      id: interaction.id }); // need to look at data body to know what to refer to
-    console.log('line 75', deleteJoke);
-    interaction.reply(deleteJoke);
   }
 });
 
