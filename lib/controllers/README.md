@@ -1,5 +1,5 @@
 # DadBot
-![DadBot Icon] (./public/DAD-BOT-LOGO.jpg)
+![DadBoTIcon](../utils/public/DAD-BOT-LOGO.jpg)
 
 # What Is DadBot?
 **
@@ -20,7 +20,7 @@ Command|Description
 /add-joke|Returns the joke that you add in the input.
 /my-jokes|Returns all you favorite jokes.
 /dad-gif|Returns a random dad joke gif.
-/get-dads|Returns the devs picture and information.
+/get-dads|Returns the devs information.
 !dad-help|Returns a Youtube video.
 
 
@@ -40,6 +40,6 @@ Olivia Passion: <br>
 <a href="https://github.com/Olivia-Pasion"><img src="../utils/public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/olivia-pasion/"><img src="../utils/public/LI-Logo.png" width="65" height="17"/></a>
 
 # Our Plan
-
+<a href="https://miro.com/app/board/uXjVPcbFIzY=/"><img src="../utils/public/miro-logo.svg" width="85" height="70"/></a>
 
 
