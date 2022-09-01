@@ -93,13 +93,11 @@ client.on('interactionCreate', async (interaction) => {
       ]
     });
   }
-  // ${ dad[1].name }, ${ dad[1].linkedin}, ${dad[1].github}, ${dad[1].image_id},
-  // ${ dad[2].name }, ${ dad[2].linkedin}, ${dad[2].github}, ${dad[2].image_id},
-  // ${ dad[3].name }, ${ dad[3].linkedin}, ${dad[3].github} ${dad[3].image_id}
-  else if (commandName === 'my-jokes') {
-    const jokeList = await User.getAllUserJokes({ user_id: interaction.user.id });
-    console.log(jokeList);
-    interaction.reply(jokeList);
+  else if (commandName === 'delete-joke') {
+    const deleteJoke = await User.deleteUserJoke({ 
+      id: interaction.id });
+    console.log('line 75', deleteJoke);
+    interaction.reply(deleteJoke);
   }
 });
 
