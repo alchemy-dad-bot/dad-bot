@@ -39,7 +39,6 @@ client.on('interactionCreate', async (interaction) => {
     // add dad joke
   } else if(commandName === 'search-joke') { 
     const jokes = await searchDadJokes(interaction.options._hoistedOptions[0].value);
-    console.log('jokes', jokes);
     await interaction.reply(jokes.results[Math.floor(Math.random() * jokes.results.length)].joke);
   } else if (commandName === 'add-joke') {
     await User.insert({
@@ -55,15 +54,13 @@ client.on('interactionCreate', async (interaction) => {
       i++;
       return i + ') ' + joke.content;
     });
-    console.log('command console', jokeList, jokeMap);
     const jokes = jokeMap.join('\n');
     interaction.reply(jokes);
     
   } else if (commandName === 'my-jokes-random') {
     const joke = await User.getRandomJoke({ user_id: interaction.user.id });
     interaction.reply(joke.content);
-    console.log('random user created joke', joke);
-    console.log(interaction.reply);
+
   } else if (commandName === 'get-dads') {
     const dad = await Creator.getCreators();
     interaction.reply({ 
