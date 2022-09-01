@@ -8,7 +8,7 @@ async function getDadHelp(query) {
         Accept: 'application/json'
       }
     });
-    console.log('res from youtube.dada', res);
+    // console.log('res from youtube.dada', res);
     const search = await res.json();
       
     if (res.status >= 400) {
