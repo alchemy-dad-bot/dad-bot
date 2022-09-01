@@ -16,9 +16,10 @@
 Command|Description 
 --- | ---
 /dad-joke|Returns a random Dad joke.
-/search-joke|Returns and specific joke. 
-/add-joke|Returns the joke that you add in the input.
-/my-jokes|Returns all you favorite jokes.
+/search-joke|Returns a joke about the topic you enter. 
+/add-joke|Allows user to add a joke.
+/my-jokes|Returns a list your submitted jokes.
+/my-jokes-random|Returns a random joke from your submissions.
 /dad-gif|Returns a random dad joke gif.
 /get-dads|Returns the devs information.
 !dad-help|Returns a Youtube video.
