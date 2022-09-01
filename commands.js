@@ -15,7 +15,7 @@ const commands = [
       option.setName('input')
         .setDescription('Give it a shot!')
         .setRequired(true)),
-  new SlashCommandBuilder().setName('my-jokes').setDescription('A list of your jokes'),    
+  new SlashCommandBuilder().setName('my-joke-random').setDescription('Get a random joke by you!'),    
   new SlashCommandBuilder().setName('get-dads').setDescription('A list of dads'),
   new SlashCommandBuilder().setName('delete-joke').setDescription('Deletes a user joke') // Currently Working on
 ]
