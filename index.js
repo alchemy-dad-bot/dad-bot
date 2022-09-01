@@ -93,12 +93,6 @@ client.on('interactionCreate', async (interaction) => {
       ]
     });
   }
-  else if (commandName === 'delete-joke') {
-    const deleteJoke = await User.deleteUserJoke({ 
-      id: interaction.id });
-    console.log('line 75', deleteJoke);
-    interaction.reply(deleteJoke);
-  }
 });
 
 
