@@ -1,11 +1,11 @@
 # DadBot
-![DadBoTIcon](../utils/public/DAD-BOT-LOGO.jpg)
+![DadBoTIcon](./public/DAD-BOT-LOGO.jpg)
 
 # What Is DadBot?
 **
 
 # Invite Link <br>
-<a href="https://discord.com/api/oauth2/authorize?client_id=1012796022885453844&permissions=2147486720&scope=applications.commands%20bot"><img src="../utils/public/invite.png" width="25"/></a>
+<a href="https://discord.com/api/oauth2/authorize?client_id=1012796022885453844&permissions=2147486720&scope=applications.commands%20bot"><img src="./public/invite.png" width="25"/></a>
 
 # Built with 
 
@@ -28,18 +28,18 @@ Command|Description
 
 
 Alejandra El-Dasouki: <br>
-<a href="https://github.com/Alejae1998"><img src="../utils/public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/alejandrael-dasouki/"><img src="../utils/public/LI-Logo.png" width="65" height="17"/></a>
+<a href="https://github.com/Alejae1998"><img src="./public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/alejandrael-dasouki/"><img src="./public/LI-Logo.png" width="65" height="17"/></a>
 
 Austin Han: <br>
-<a href="https://github.com/austinbhan"><img src="../utils/public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/austin-han-740a69157/"><img src="../utils/public/LI-Logo.png" width="65" height="17"/></a>
+<a href="https://github.com/austinbhan"><img src="./public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/austin-han-740a69157/"><img src="./public/LI-Logo.png" width="65" height="17"/></a>
 
 Brien Thomas: <br> 
-<a href="https://github.com/briensthomas"><img src="../utils/public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/brien-thomas/"><img src="../utils/public/LI-Logo.png" width="65" height="17"/></a>
+<a href="https://github.com/briensthomas"><img src="./public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/brien-thomas/"><img src="./public/LI-Logo.png" width="65" height="17"/></a>
 
 Olivia Passion: <br>
-<a href="https://github.com/Olivia-Pasion"><img src="../utils/public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/olivia-pasion/"><img src="../utils/public/LI-Logo.png" width="65" height="17"/></a>
+<a href="https://github.com/Olivia-Pasion"><img src="./public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/olivia-pasion/"><img src="./public/LI-Logo.png" width="65" height="17"/></a>
 
 # Our Plan
-<a href="https://miro.com/app/board/uXjVPcbFIzY=/"><img src="../utils/public/miro-logo.svg" width="85" height="70"/></a>
+<a href="https://miro.com/app/board/uXjVPcbFIzY=/"><img src="./public/miro-logo.svg" width="85" height="70"/></a>
 
 
