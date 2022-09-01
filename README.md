@@ -2,7 +2,7 @@
 ![DadBoTIcon](./public/DAD-BOT-LOGO.jpg)
 
 # What Is DadBot?
-**
+**If you were never exposed to the embarrassment of a father figure during your formative years, look no further! With DadBot, you can groan at the corniest dad-jokes known to man.**
 
 # Invite Link <br>
 <a href="https://discord.com/api/oauth2/authorize?client_id=1012796022885453844&permissions=2147486720&scope=applications.commands%20bot"><img src="./public/invite.png" width="25"/></a>
