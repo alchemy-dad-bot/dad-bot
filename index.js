@@ -46,7 +46,7 @@ client.on('interactionCreate', async (interaction) => {
       content: interaction.options._hoistedOptions[0].value,
     });
     await interaction.reply({ content: 'Good one Kiddo!', ephemeral: true });
-  } else if (commandName === 'my-jokes') {
+  } else if (commandName === 'my-joke-random') {
     const joke = await User.getRandomJoke({ user_id: interaction.user.id });
     interaction.reply(joke.content);
     console.log('random user created joke', joke);
