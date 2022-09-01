@@ -39,5 +39,7 @@ Brien Thomas: <br>
 Olivia Passion: <br>
 <a href="https://github.com/Olivia-Pasion"><img src="../utils/public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/olivia-pasion/"><img src="../utils/public/LI-Logo.png" width="65" height="17"/></a>
 
+# Our Plan
+
 
 
