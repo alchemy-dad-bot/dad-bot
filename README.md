@@ -9,37 +9,45 @@
 
 # Built with 
 
-<p align="left"> <a href="https://heroku.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" alt="heroku" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://jestjs.io" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg" alt="jest" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> </p>
+| command                | description                                                                         |
+| ---------------------- | ----------------------------------------------------------------------------------- |
+| `npm start`            | starts the app - should only be used in production as changes will not get reloaded |
+| `npm run start:watch`  | runs the app using `nodemon` which watches for changes and reloads the app          |
+| `npm test`             | runs the tests once                                                                 |
+| `npm run test:watch`   | continually watches and runs the tests when files are updated                       |
+| `npm run setup-db`     | sets up the database locally                                                        |
+| `npm run setup-heroku` | sets up the database on heroku                                                      |
 
-# Commands
 
-Command|Description 
+# DadBot:
+(Discord use only)
+
+## What is DadBot? 
+BLANK DESCRIPTION HERE
+
+
+## DEV Team:
+* Alejandra El-Dasouki-- [GitHub](https://github.com/Alejae1998) | [LinkedIn](https://www.linkedin.com/in/alejandrael-dasouki/)
+* Austin Han-- [GitHub](https://github.com/austinbhan) | [LinkedIn](https://www.linkedin.com/in/austin-han-740a69157/)
+* Olivia Pasion-- [GitHub](https://github.com/Olivia-Pasion) | [LinkedIn](https://www.linkedin.com/in/olivia-pasion/)
+* Brien Thomas-- [GitHub](https://github.com/briensthomas) | [LinkedIn](https://www.linkedin.com/in/brien-thomas/)
+
+
+# Commands:
+Command|Description
 --- | ---
-/dad-joke|Returns a random Dad joke.
-/search-joke|Returns and specific joke. 
-/add-joke|Returns the joke that you add in the input.
-/my-jokes|Returns all you favorite jokes.
-/dad-gif|Returns a random dad joke gif.
-/get-dads|Returns the devs information.
-!dad-help|Returns a Youtube video.
+/dad-joke|Returns a random dad joke. //Example only
 
 
-# Dads Team 
 
+# Add DadBot to your Discord channel: <br> 
+<a href="#">Discord Icon Here?</a>
 
-Alejandra El-Dasouki: <br>
-<a href="https://github.com/Alejae1998"><img src="../utils/public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/alejandrael-dasouki/"><img src="../utils/public/LI-Logo.png" width="65" height="17"/></a>
-
-Austin Han: <br>
-<a href="https://github.com/austinbhan"><img src="../utils/public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/austin-han-740a69157/"><img src="../utils/public/LI-Logo.png" width="65" height="17"/></a>
-
-Brien Thomas: <br> 
-<a href="https://github.com/briensthomas"><img src="../utils/public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/brien-thomas/"><img src="../utils/public/LI-Logo.png" width="65" height="17"/></a>
-
-Olivia Passion: <br>
-<a href="https://github.com/Olivia-Pasion"><img src="../utils/public/GitHub_Logo.png" width="50"/></a> | <a href="https://www.linkedin.com/in/olivia-pasion/"><img src="../utils/public/LI-Logo.png" width="65" height="17"/></a>
+## Our Plan:
 
 # Our Plan
 <a href="https://miro.com/app/board/uXjVPcbFIzY=/"><img src="../utils/public/miro-logo.svg" width="85" height="70"/></a>
+
+## Technologies:
 
 
