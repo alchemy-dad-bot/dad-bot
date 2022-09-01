@@ -6,7 +6,6 @@ const { getDadJokes, searchDadJokes } = require('./data/dad-jokes-data');
 const User = require('./lib/models/User');
 const Creator = require('./lib/models/Creator');
 const dotenv = require('dotenv');
-const Favorite = require('./lib/models/Favorite');
 dotenv.config();
  
 const client = new Client({
@@ -50,22 +49,58 @@ client.on('interactionCreate', async (interaction) => {
   } else if (commandName === 'my-jokes') {
     const joke = await User.getRandomJoke({ user_id: interaction.user.id });
     interaction.reply(joke.content);
+    console.log('random user created joke', joke);
+    console.log(interaction.reply);
   } else if (commandName === 'get-dads') {
     const dad = await Creator.getCreators();
     interaction.reply({ 
       content: 
       `
-      ${ dad[0].name }, ${ dad[0].linkedin}, ${dad[0].github},
-      ${ dad[1].name }, ${ dad[1].linkedin}, ${dad[1].github},
-      ${ dad[2].name }, ${ dad[2].linkedin}, ${dad[2].github},
-      ${ dad[3].name }, ${ dad[3].linkedin}, ${dad[3].github}
-      `
+      
+      `, 'embeds': [
+        {
+          title: 'Alejandra',
+          image: {
+            url: `${dad[0].image_id}`
+          },
+          url: `${dad[0].linkedin}`,
+          description: '[My Github](https://github.com/Alejae1998)',
+        },
+        {
+          title: 'Austin',
+          image: {
+            url: `${dad[1].image_id}`
+          },
+          url: `${dad[1].linkedin}`,
+          description: '[My Github](https://github.com/austinbhan)',
+        }, 
+        {
+          title: 'Olivia',
+          image: {
+            url: `${dad[2].image_id}`
+          },
+          url: `${dad[2].linkedin}`,
+          description: '[My Github](https://github.com/Olivia-Pasion)',
+        },
+        {
+          title: 'Brien',
+          image: {
+            url: `${dad[3].image_id}`
+          },
+          url: `${dad[3].linkedin}`,
+          description: '[My Github](https://github.com/briensthomas)',
+        }
+      ]
     });
-  } else if (commandName === 'add-favorite') {
-    await Favorite.addFavorite({ 
-      user_id: interaction.user.id,
-      content: interaction.options._hoistedOptions[0].value });
-    await interaction.reply({ content: 'You got it sport!', ephemeral: true });
+  }
+  // ${ dad[1].name }, ${ dad[1].linkedin}, ${dad[1].github}, ${dad[1].image_id},
+  // ${ dad[2].name }, ${ dad[2].linkedin}, ${dad[2].github}, ${dad[2].image_id},
+  // ${ dad[3].name }, ${ dad[3].linkedin}, ${dad[3].github} ${dad[3].image_id}
+  else if (commandName === 'delete-joke') {
+    const deleteJoke = await User.deleteUserJoke({ 
+      id: interaction.id }); // need to look at data body to know what to refer to
+    console.log('line 75', deleteJoke);
+    interaction.reply(deleteJoke);
   }
 });
 
