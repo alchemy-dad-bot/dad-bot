@@ -46,6 +46,18 @@ client.on('interactionCreate', async (interaction) => {
       content: interaction.options._hoistedOptions[0].value,
     });
     await interaction.reply({ content: 'Good one Kiddo!', ephemeral: true });
+  } else if (commandName === 'my-jokes') {
+    const jokeList = await User.getAllUserJokes({ user_id: interaction.user.id });
+    let i = 0;
+    //const jokes = jokeList[0];
+    const jokeMap = jokeList.map((joke) => {
+      i++;
+      return i + ') ' + joke.content;
+    });
+    console.log('command console', jokeList, jokeMap);
+    const jokes = jokeMap.join('\n');
+    interaction.reply(jokes);
+    
   } else if (commandName === 'my-jokes-random') {
     const joke = await User.getRandomJoke({ user_id: interaction.user.id });
     interaction.reply(joke.content);
