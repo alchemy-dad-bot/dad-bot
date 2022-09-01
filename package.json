@@ -41,8 +41,12 @@
     "discord.js": "^14.3.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "google-auth-library": "^8.5.1",
+    "googleapis": "^107.0.0",
     "jsonwebtoken": "^8.5.1",
     "node-fetch": "^3.2.10",
-    "pg": "^8.7.3"
+    "pg": "^8.7.3",
+    "youtube-search": "^1.1.6",
+    "youtube-search-api": "^1.1.0"
   }
 }
