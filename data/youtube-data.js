@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const fetch = require('cross-fetch');
 
 async function getDadHelp(query) {
@@ -8,7 +9,6 @@ async function getDadHelp(query) {
         Accept: 'application/json'
       }
     });
-    // console.log('res from youtube.dada', res);
     const search = await res.json();
       
     if (res.status >= 400) {
@@ -16,7 +16,6 @@ async function getDadHelp(query) {
     }
     return search;
   } catch (err) {
-    // eslint-disable-next-line no-console
     console.error(err);
   }
 }
