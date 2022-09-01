@@ -17,6 +17,10 @@ client.once('ready', () => {
   console.log('Ready from index.js');
 });
 
+client.on('ready', () => {
+  client.channels.cache.get(process.env.CHANNEL_ID).send('I am online!');
+});
+
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
