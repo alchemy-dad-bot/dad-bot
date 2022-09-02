@@ -7,6 +7,8 @@ const User = require('./lib/models/User');
 const Creator = require('./lib/models/Creator');
 const dotenv = require('dotenv');
 dotenv.config();
+
+require('./lib/youtube-search/youtube');
  
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
