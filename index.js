@@ -1,11 +1,10 @@
 /* eslint-disable no-console */
 const { Client, GatewayIntentBits } = require('discord.js');
-const { init } = require('./commands');
-// const fetch = require('cross-fetch');
 const { getDadJokes, searchDadJokes } = require('./data/dad-jokes-data');
+const { getGifs } = require('./data/giphy-API');
+const { init } = require('./commands');
 const User = require('./lib/models/User');
 const Creator = require('./lib/models/Creator');
-const { getGifs } = require('./data/giphy-API');
 const dotenv = require('dotenv');
 dotenv.config();
  
@@ -32,22 +31,24 @@ client.on('interactionCreate', async (interaction) => {
     );
   } else if (commandName === 'user') {
     await interaction.reply('User info.');
+
     // Start custom dad commands
   } else if (commandName === 'dad-joke') {
     const jokeResult = await getDadJokes();
     interaction.reply(jokeResult.joke);
 
-    // add dad joke
   } else if(commandName === 'search-joke') { 
     const jokes = await searchDadJokes(interaction.options._hoistedOptions[0].value);
     await interaction.reply(jokes.results[Math.floor(Math.random() * jokes.results.length)].joke);
+
   } else if (commandName === 'add-joke') {
     await User.insert({
       user_id: interaction.user.id,
       content: interaction.options._hoistedOptions[0].value,
     });
     await interaction.reply({ content: 'Good one Kiddo!', ephemeral: true });
-  }  else if (commandName === 'dad-gif') {
+
+  } else if (commandName === 'dad-gif') {
     const gifResult = await getGifs();
     await interaction.reply(gifResult.data.url);
   }
@@ -55,7 +56,6 @@ client.on('interactionCreate', async (interaction) => {
   else if (commandName === 'my-jokes') {
     const jokeList = await User.getAllUserJokes({ user_id: interaction.user.id });
     let i = 0;
-    //const jokes = jokeList[0];
     const jokeMap = jokeList.map((joke) => {
       i++;
       return i + ') ' + joke.content;
@@ -79,7 +79,7 @@ client.on('interactionCreate', async (interaction) => {
           image: {
             url: `${dad[0].image_id}`
           },
-          url: `${dad[0].linkedin}`,
+          url: `${dad[0].github}`,
           description: '[My Github](https://github.com/Alejae1998)',
         },
         {
@@ -87,7 +87,7 @@ client.on('interactionCreate', async (interaction) => {
           image: {
             url: `${dad[1].image_id}`
           },
-          url: `${dad[1].linkedin}`,
+          url: `${dad[1].github}`,
           description: '[My Github](https://github.com/austinbhan)',
         }, 
         {
@@ -95,7 +95,7 @@ client.on('interactionCreate', async (interaction) => {
           image: {
             url: `${dad[2].image_id}`
           },
-          url: `${dad[2].linkedin}`,
+          url: `${dad[2].github}`,
           description: '[My Github](https://github.com/Olivia-Pasion)',
         },
         {
@@ -103,14 +103,12 @@ client.on('interactionCreate', async (interaction) => {
           image: {
             url: `${dad[3].image_id}`
           },
-          url: `${dad[3].linkedin}`,
+          url: `${dad[3].github}`,
           description: '[My Github](https://github.com/briensthomas)',
         }
       ]
     });
   }
 });
-
-
 
 client.login(process.env.DISCORD_TOKEN);

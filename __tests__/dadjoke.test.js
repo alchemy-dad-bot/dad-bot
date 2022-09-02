@@ -14,9 +14,6 @@ describe('backend-express-template routes', () => {
     expect(res.body).toEqual({ id: expect.any(String), joke: expect.any(String) });
   });
 
-
-
-
   afterAll(() => {
     pool.end();
   });
