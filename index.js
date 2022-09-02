@@ -47,13 +47,13 @@ client.on('interactionCreate', async (interaction) => {
       content: interaction.options._hoistedOptions[0].value,
     });
     await interaction.reply({ content: 'Good one Kiddo!', ephemeral: true });
-
+    // get GIF commands
   } else if (commandName === 'dad-gif') {
     const gifResult = await getGifs();
     await interaction.reply(gifResult.data.url);
-  }
   
-  else if (commandName === 'my-jokes') {
+    // Get data from SQL tables
+  } else if (commandName === 'my-jokes') {
     const jokeList = await User.getAllUserJokes({ user_id: interaction.user.id });
     let i = 0;
     const jokeMap = jokeList.map((joke) => {
