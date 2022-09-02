@@ -44,4 +44,8 @@ Brien Thomas: <br>
 # Our Plan
 <a href="https://miro.com/app/board/uXjVPcbFIzY=/"><img src="./public/miro-logo.svg" width="85" height="70"/></a>
 
-
+# To Use 
+1: After opening, open terminal  
+2: In terminal, `node index.js`  
+3: Then, `node lib/youtube-search/youtube.js`  
+4: Have fun my child!
